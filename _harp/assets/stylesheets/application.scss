@@ -1,36 +1,53 @@
 body {
-      padding: 25px;
-      font-family: helvetica, sans-serif;
-      background-color: red;
+      font-family: Arial, sans-serif;
+      background-color: black;
 }
 
 .pure-g {
-      border: 5px solid orange;
-      margin-bottom: 25px;
+      padding: 5px 25px 25px 25px;
 }
 
 .pure-u-1 {
       box-sizing: border-box;
-      border: 5px solid cadetblue;
-      padding: 25px;
-      text-align: center;
+      padding: 5px;
+}
+
+.pure-u-2 {
+      box-sizing: border-box;
+      text-align: left;
 }
 
 h1 {
-      font-size: 1.2em;
-      font-weight: 900;
+      font-size: 9em;
+      letter-spacing: 1px;
+      -webkit-text-fill-color: #FDFBEC;
+      -webkit-text-stroke-width: 3px;
+      -webkit-text-stroke-color: black;
+      font-family: 'Bungee', cursive;
 }
 
 h2 {
-      font-size: 1.1em;
+      font-size: 3em;
       font-weight: 900;
       margin-bottom: 25px;
+      font-family: 'Roboto', sans-serif;
+      color: #FDFBEC;
+}
+
+h3 {
+      text-align: left;
+      line-height: 1.6em;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bolder;
+      letter-spacing: 0.8px;
+      color: #FDFBEC;
 }
 
 p {
       margin-bottom: 25px;
       text-align: left;
       line-height: 1.6em;
+      font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -38,13 +55,46 @@ ul {
       padding: 0;
 }
 
-@media (max-width: 48em) {
-      li a {
-            color: red;
-      }
+li {
+      display: inline;
+      padding-right: 20px;
+      text-align: center;
+}
 
-      li {
-            display: inline;
-            margin-right: 10px;
-      }
+a {
+      text-decoration: none;
+      color: white;
+      font-weight: bolder;
+      font-size: 1.8em;
+}
+
+a:hover {text-shadow: 1px 3px #2ecc71, 3px 3px #2ecc71;}
+
+/*** GRADIENT BAR ***/
+
+.bar {
+      margin-top: -9%;
+      margin-bottom: 5%;
+      height: 15px;
+      width: 890px;
+      background-color: #d3d3d3;
+      background: -webkit-linear-gradient(left,  rgba(255,255,28,1) 0%,rgba(0,195,200,1) 25%,rgba(255,255,28,1) 100%);
+      animation: rotate 15s infinite linear;
+}
+
+.barTop {
+      height: 4px;
+      width: 100%;
+      background-color: #d3d3d3;
+      background: -webkit-linear-gradient(left,  rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%);
+      animation: rotate 15s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    background-position: -3000px;
+  }
+  to {
+    background-position: 0px;
+  }
 }
